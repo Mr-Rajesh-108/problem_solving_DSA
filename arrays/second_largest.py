@@ -1,6 +1,6 @@
 def second_largest(arr):
     if len(arr) < 2:
-        return None  # Not enough elements
+        return -1  # Not enough elements
 
     first_largest = float('-inf')
     second_largest = float('-inf')
@@ -12,7 +12,7 @@ def second_largest(arr):
         elif first_largest > element > second_largest:
             second_largest = element
 
-    return None if second_largest == float('-inf') else second_largest
+    return -1 if second_largest == float('-inf') else second_largest
 
 arr = [12, 35, 1, 10, 34, 1]
 #output = 34
