@@ -1,16 +1,12 @@
 # Pythagorean Triplet
 
-**Difficulty:** Medium  
-**Accuracy:** 24.77%  
-**Submissions:** 240K+  
-**Points:** 4  
-**Average Time:** 20m
+**Difficulty:** Medium  **Average Time:** 20m
 
 ---
 
 ## Problem Statement
 
-Given an array `arr[]`, return `true` if there is a **triplet (a, b, c)** from the array (where `a`, `b`, and `c` are on different indexes) that satisfies the condition:
+Given an array `arr[]`, return `true` if there is a **triplet (a, b, c)** from the array (where `a`, `b`, and `c` are on different indexes) that satisfies the condition: `a² + b² = c²`
 
 Otherwise, return `false`.
 
