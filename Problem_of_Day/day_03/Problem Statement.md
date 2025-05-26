@@ -90,3 +90,25 @@ class Solution:
         if data < head.data:
             return new_node
         return head
+```
+---
+
+## 🧪 Example Usage
+``` python
+# Create initial circular list: 1 -> 2 -> 4
+a = Node(1)
+b = Node(2)
+c = Node(4)
+a.next = b
+b.next = c
+c.next = a
+head = a
+
+# Insert new node with data = 2
+sol = Solution()
+head = sol.sortedInsert(head, 2)
+
+# Output: 1 -> 2 -> 2 -> 4
+print_circular_list(head)
+
+```
