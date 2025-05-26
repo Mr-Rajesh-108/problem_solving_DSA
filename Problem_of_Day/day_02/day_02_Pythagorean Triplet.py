@@ -33,6 +33,13 @@ def pythagoreanTriplet(arr):
                 a2_b2 = arr[i]**2 + arr[j]**2
                 if a2_b2 in squares:
                     return True
+                
         return False
 arr=[14, 17, 4, 4, 1, 9, 25, 12, 4, 9, 18, 15, 12, 2, 3, 13, 16, 17, 15, 6, 5, 20, 14, 8]
+arr1=[3, 2, 4, 6, 5]
+arr2=[3,8,5]
+arr3=[1,1,1]
 print(pythagoreanTriplet(arr))
+print(pythagoreanTriplet(arr1))
+print(pythagoreanTriplet(arr2))
+print(pythagoreanTriplet(arr3))

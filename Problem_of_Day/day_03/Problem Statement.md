@@ -2,7 +2,6 @@
 
 **Difficulty:** Medium  
 **Accuracy:** 25.56%  
-**Points:** 4  
 **Average Time:** 20 minutes
 
 ---
@@ -13,7 +12,7 @@ Given a **sorted circular linked list**, the task is to **insert** a new node in
 
 ---
 
-## 💡 Examples
+## 💡 Test Cases
 
 ### Example 1:
 **Input:**  
@@ -95,20 +94,42 @@ class Solution:
 
 ## 🧪 Example Usage
 ``` python
-# Create initial circular list: 1 -> 2 -> 4
-a = Node(1)
-b = Node(2)
-c = Node(4)
-a.next = b
-b.next = c
-c.next = a
-head = a
+def print_circular_list(head):
+    if not head:
+        print("List is empty.")
+        return
+    result = []
+    current = head
+    while True:
+        result.append(str(current.data))
+        current = current.next
+        if current == head:
+            break
+    print(" ".join(result))
 
-# Insert new node with data = 2
-sol = Solution()
-head = sol.sortedInsert(head, 2)
+# 🔍 Build input list: 48 -> 49 -> 53 -> 54 -> 61 (circular)
+values = [48, 49, 53, 54, 61]
+nodes = [Node(val) for val in values]
+for i in range(len(nodes)):
+    nodes[i].next = nodes[(i + 1) % len(nodes)]
+head = nodes[0]
 
-# Output: 1 -> 2 -> 2 -> 4
+print("Original list:")
 print_circular_list(head)
 
+# ✅ Insert 11
+head = insert_sorted_circular(head, 11)
+
+print("After inserting 11:")
+print_circular_list(head)
+
+
+```
+---
+✅ Output
+```
+Original list:
+48 49 53 54 61
+After inserting 11:
+11 48 49 53 54 61
 ```

@@ -1,5 +1,6 @@
 # Sum of all substrings of a number
 **Difficulty:** Medium
+
 ## Problem Statement
 Given an integer `str` represented as a string, the task is to get the sum of all possible sub-strings of this string.
 
