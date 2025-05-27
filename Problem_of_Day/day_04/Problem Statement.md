@@ -24,6 +24,7 @@ preorder[] = [5, 2, 10]
 ![exp1_img](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/895564/Web/Other/blobid0_1747480179.jpg)
 
 2 and 10 are the leaf nodes as shown in the figure.
+
 ---
 ### ✅ Example 2
 **Input:** 
@@ -36,6 +37,7 @@ preorder[] = [4, 2, 1, 3, 6, 5]
 ![exp2_img](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/895564/Web/Other/blobid1_1747480193.jpg)
 
 1, 3 and 5 are the leaf nodes as shown in the figure.
+
 ---
 ### ✅ Example 3
 
