@@ -16,23 +16,38 @@ Given a preorder traversal of a Binary Search Tree (BST), find the **leaf nodes*
 
 **Input:**
 preorder[] = [5, 2, 10]
-**Output** [2, 10]
-**Explaination**
+
+**Output:** [2, 10]
+
+**Explaination:**
+
 ![exp1_img](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/895564/Web/Other/blobid0_1747480179.jpg)
+
 2 and 10 are the leaf nodes as shown in the figure.
 ---
 ### ✅ Example 2
-**Input:** preorder[] = [4, 2, 1, 3, 6, 5]
+**Input:** 
+preorder[] = [4, 2, 1, 3, 6, 5]
+
 **Output:** [1, 3, 5]
+
 **Explaination:**
+
 ![exp2_img](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/895564/Web/Other/blobid1_1747480193.jpg)
+
 1, 3 and 5 are the leaf nodes as shown in the figure.
 ---
 ### ✅ Example 3
-**Input:** preorder[] = [8, 2, 5, 10, 12]
+
+**Input:** 
+preorder[] = [8, 2, 5, 10, 12]
+
 **Output:** [5, 12]
+
 **Explaination:** 
+
 ![exp3_img](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/895564/Web/Other/blobid2_1747480202.jpg)
+
 5 and 12 are the leaf nodes as shown in the figure.
 
 ---
