@@ -1,8 +1,7 @@
-
 # 🟢 Find Rectangle with Corners as 1
 
 **Difficulty**: Medium  
-**Accuracy**: 56.75%  
+**Accuracy**: 56.75%
 
 ---
 
@@ -18,16 +17,18 @@ If such a rectangle exists, return `true`; otherwise, return `false`.
 ### ✅ Example 1
 
 **Input:**
+
 ```python
 mat = [
   [1, 0, 0, 1, 0],
   [0, 0, 1, 0, 1],
-  [0, 0, 0, 1, 0], 
+  [0, 0, 0, 1, 0],
   [1, 0, 1, 0, 1]
 ]
 ```
 
 **Output:**
+
 ```
 true
 ```
@@ -40,6 +41,7 @@ Valid corners are at indices (1,2), (1,4), (3,2), (3,4).
 ### ✅ Example 2
 
 **Input:**
+
 ```python
 mat = [
   [0, 0, 0],
@@ -49,6 +51,7 @@ mat = [
 ```
 
 **Output:**
+
 ```
 false
 ```
@@ -60,11 +63,13 @@ There are no valid corners with all 1s.
 
 ## 📌 Constraints
 
-- `1 ≤ n, m ≤ 200`  
+- `1 ≤ n, m ≤ 200`
 - `0 ≤ mat[i][j] ≤ 1`
 
 ---
+
 ## ✅ Python Solution
+
 ```python
 def has_rectangle_with_ones(mat):
     if not mat or not mat[0]:
@@ -88,15 +93,17 @@ def has_rectangle_with_ones(mat):
     return False
 
 ```
+
 ---
 
 ## 🧪 Example Usage
+
 ```python
 
 mat1 = [
     [1, 0, 0, 1, 0],
     [0, 0, 1, 0, 1],
-    [0, 0, 0, 1, 0], 
+    [0, 0, 0, 1, 0],
     [1, 0, 1, 0, 1]
 ]
 mat2 = [
@@ -112,6 +119,7 @@ print(has_rectangle_with_ones(mat2))  # Output: False
 ---
 
 ## ✅ Output
+
 ```
 True
 False
