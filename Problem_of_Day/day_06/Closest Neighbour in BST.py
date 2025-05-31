@@ -4,50 +4,51 @@ class Node:
         self.left = None
         self.right = None
 
-class Solution:
-    def find_max_leq_k(self, root, k):
-        result = None
-        while root:
-            if root.data <= k:
-                result = root.data
-                root = root.right
-            else:
-                root = root.left
-        return result
+def findMaxFork(root, k):
+    result = None
+    while root:
+        if root.data <= k:
+            result = root.data
+            root = root.right
+        else:
+            root = root.left
+    return result if result is not None else -1
 
-def build_tree_from_list(values):
-    if not values or values[0] is None:
-        return -1
-
-    root = Node(values[0])
+def build_tree_from_list(s):
+    if not s or s[0] == 'N':
+        return None
+    values = s.strip().split()
+    root = Node(int(values[0]))
     queue = [root]
     index = 1
 
     while queue and index < len(values):
         node = queue.pop(0)
 
-        if index < len(values) and values[index] is not None:
-            node.left = Node(values[index])
+        if index < len(values) and values[index] != 'N':
+            node.left = Node(int(values[index]))
             queue.append(node.left)
         index += 1
 
-        if index < len(values) and values[index] is not None:
-            node.right = Node(values[index])
+        if index < len(values) and values[index] != 'N':
+            node.right = Node(int(values[index]))
             queue.append(node.right)
         index += 1
 
     return root
 
-# Create solution instance
-sol = Solution()
+def run_example(tree_list, k):
+    s = ' '.join(str(x) for x in tree_list)
+    root = build_tree_from_list(s)
+    return findMaxFork(root, k)
+
 
 # Example 1
-tree1 = build_tree_from_list([10, 7, 15, 2, 8, 11, 16])
-print(sol.find_max_leq_k(tree1, 14))  # Output: 11
+print(run_example([10, 7, 15, 2, 8, 11, 16], 14))  # Output: 11
 
 # Example 2
-tree2 = build_tree_from_list([5, 2, 12, 1, 3, 9, 21, None, None, None, None, None, None, 19, 25])
-print(sol.find_max_leq_k(tree2, 24))  # Output: 21
+print(run_example([5, 2, 12, 1, 3, 9, 21, 'N', 'N', 'N', 'N', 'N', 'N', 19, 25], 24))  # Output: 21
 
 # Example 3
-print(sol.find_max_leq_k(tree2, 4))   # Output: 3
+print(run_example([5, 2, 12, 1, 3, 9, 21, 'N', 'N', 'N', 'N', 'N', 'N', 19, 25], 4))   # Output: 3
+
