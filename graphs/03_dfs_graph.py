@@ -36,5 +36,6 @@ g.add_edge(1,3)
 g.add_edge(2,4)
 g.add_edge(2,3)
 
-g.print()
+g.print() # Print adjacency matrix
+print("DFS Traversal starting from vertex 0:")
 g.dfs(0)  # Start DFS from vertex 0
