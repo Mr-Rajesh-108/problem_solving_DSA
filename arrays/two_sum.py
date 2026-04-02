@@ -18,7 +18,7 @@ class Solution:
                     return [i,j]
                 
                 
-    def two_sum_pointer(self, nums: List[int], target: int) -> List[int]:
+    def two_sum_twoPointer(self, nums: List[int], target: int) -> List[int]:
         left = 0
         right = len(nums) - 1
         nums = sorted(nums) # Sort the list to use two pointers
@@ -39,4 +39,4 @@ target1 = 9
 sol = Solution()
 print(sol.twoSum(list1, target1))  # Output: [0, 1]
 print(sol.two_sum_brute_force(list1, target1))  # Output: [0, 1]
-print(sol.two_sum_pointer(list1, target1))  # Output: [0, 1]
+print(sol.two_sum_twoPointer(list1, target1))  # Output: [0, 1]
